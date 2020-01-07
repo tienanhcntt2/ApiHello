@@ -36,12 +36,12 @@ namespace HelloApi.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<Bophan>> addBoPhan(Bophan bophan)
         {
-            if(bophan.mabophan == null || bophan.mabophan == "")
+            if (bophan.mabophan == null || bophan.mabophan == "")
             {
                 return BadRequest();
             }
             var newBophan = await context.Bophan.FindAsync(bophan.mabophan);
-            if(newBophan != null)
+            if (newBophan != null)
             {
                 return BadRequest();
             }
@@ -54,12 +54,12 @@ namespace HelloApi.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                   return NotFound(new  { status = "404", message = "error" });
+                    return NotFound(new { status = "404", message = "error" });
                 }
             }
-            return CreatedAtAction("",new { status = true, Bophan = bophan });
+            return CreatedAtAction("", new { status = true, Bophan = bophan });
         }
-        
+
         [HttpPut("{id}")]
         public async Task<IActionResult> editBophan(string id,Bophan bophan)
         {
@@ -95,9 +95,11 @@ namespace HelloApi.Controllers
         
         [HttpPost]
         [Route("deleteBophan")]
-        public async Task<IActionResult> deleteBophan(Bophan id)
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> deleteBophan(Bophan bp)
         {
-            var _bophan = await context.Bophan.FindAsync(id.mabophan);
+            var _bophan = await context.Bophan.FindAsync(bp.mabophan);
             
             if (_bophan == null)
             {

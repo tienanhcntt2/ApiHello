@@ -21,6 +21,7 @@ namespace HelloApi.Models
         public DbSet<HelloApi.models.Nhanvien> Nhanvien { get; set; }
         public DbSet<HelloApi.models.Bophan> Bophan { get; set; }
         public DbSet<chucvu> Chucvu { get; set; }
+        public DbSet<Bangluong> Bangluong { get; set; }
 
 
     }

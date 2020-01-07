@@ -29,4 +29,3 @@ D:\ASP\HelloApi\HelloApi\obj\Debug\netcoreapp2.1\Razor\Views\Nhanviens\Details.c
 D:\ASP\HelloApi\HelloApi\obj\Debug\netcoreapp2.1\Razor\Views\Nhanviens\Edit.cshtml.g.cs
 D:\ASP\HelloApi\HelloApi\obj\Debug\netcoreapp2.1\Razor\Views\Nhanviens\Index.cshtml.g.cs
 D:\ASP\HelloApi\HelloApi\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-D:\ASP\HelloApi\HelloApi\obj\Debug\netcoreapp2.1\HelloApi.csprojAssemblyReference.cache
