@@ -1,0 +1,72 @@
+﻿@model HelloApi.models.Nhanvien
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Nhanvien</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.hoten)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.hoten)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.diachi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.diachi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.dienthoai)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.dienthoai)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.mabophan)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.mabophan)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaysinh)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ngaysinh)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.gioitinh)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.gioitinh)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.macv)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.macv)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TDVH)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TDVH)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.bacluong)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.bacluong)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.manhanvien">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

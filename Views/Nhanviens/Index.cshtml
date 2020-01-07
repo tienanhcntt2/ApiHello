@@ -1,0 +1,83 @@
+﻿@model IEnumerable<HelloApi.models.Nhanvien>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.hoten)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.diachi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dienthoai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mabophan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ngaysinh)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.gioitinh)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.macv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TDVH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bacluong)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.hoten)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.diachi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dienthoai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mabophan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ngaysinh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gioitinh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.macv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TDVH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bacluong)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.manhanvien">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.manhanvien">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.manhanvien">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
